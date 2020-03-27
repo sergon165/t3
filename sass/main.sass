@@ -1,0 +1,254 @@
+@import "colors"
+@import "fonts"
+
+body
+	font-family: 'Open Sans', sans-serif
+	font-size: 15px
+
+.btn
+	&:not(.modal .btn)
+		display: inline-block
+		font-weight: bold
+		font-size: 18px
+		padding: 20px 50px
+		outline: 0
+	&_accent
+		background-color: $accent
+		color: #000
+		&:hover
+			color: #000
+			background-color: lighten($accent, 20)
+	&_secondary
+		border: 1px solid #fff
+		color: #fff
+		transition: all .5s
+		background-color: transparent
+		&:hover
+			color: #000
+			background-color: #fff
+
+.f_screen
+	background: url(../img/bg.jpg) center
+	background-size: cover
+	position: relative
+	width: 100%
+	height: 100vh
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background: rgba(0,0,0,0.7)
+	.container
+		padding: 15px 0
+		position: relative
+		height: 100%
+		.utp
+			margin: auto
+			text-align: center
+			color: #fff
+			position: absolute
+			right: 0
+			left: 0
+			top: 50%
+			margin-top: -100px
+			h1
+				font-size: 41px
+			h2
+				font-size: 28px
+				color: #d8d6d6
+				margin-bottom: 35px
+			.btn
+				margin: 0 15px
+		.row
+			.phone
+				color: $white
+				display: inline-block
+				margin-left: 15px
+				.fa
+					margin-right: 5px
+			ul.top-menu
+				margin: 0
+				padding: 0
+				list-style: none
+				li
+					display: inline-block
+					margin-left: 10px
+					&:first-child
+						margin: 0
+					a
+						color: $white
+
+section
+	padding: 50px 0
+	h2
+		text-align: center
+		margin-bottom: 30px
+		font-size: 30px
+	h3
+		font-size: 20px
+	&:nth-child(odd)
+		background: url(../img/bg_dark.jpg) repeat
+		background-size: cover
+		color: $white
+		position: relative
+		&:before 
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: rgba(0,0,0,0.7)
+			z-index: 0
+		.container
+			position: relative
+
+	
+	&.services, &.works
+		padding-bottom: 20px
+		.item
+			border: 2px solid $accent
+			border-radius: 5px
+			text-align: center
+			padding-top: 20px
+			margin-bottom: 30px
+			h3
+				margin-top: 15px
+			span
+				display: block
+				color: $accent
+				font-size: 25px
+			.btn
+				padding: 20px 0
+				margin-top: 20px
+				width: 100%
+				border-radius: 0
+	&.services
+		.item
+			height: 320px
+			position: relative
+			.btn
+				position: absolute
+				bottom: 0
+				left: 0
+			h4
+				position: absolute
+				top: 0
+				background-color: $accent
+				color: #fff
+				padding: 10px
+				border-radius: 5px 5px 0 0
+				margin: 0
+	&.works
+		.item
+			padding-top: 0
+			img
+				object-fit: cover
+				width: 100%
+				height: 230px
+			p
+				margin: 0
+			h3
+				margin: 30px 0 20px
+			.btn
+				margin-top: 30px
+
+	&.advantages
+		text-align: center
+		h3
+			color: $accent
+			margin-top: 20px
+		p
+			margin: 0
+			color: #d8d6d6
+
+	&.stages
+		.btn
+			padding: 10px 30px !important
+		img
+			width: 100%
+		.row
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+			.title
+				.content
+					margin-left: 50px
+				b
+					color: $accent
+					font-size: 60px
+					float: left
+					line-height: 50px
+					margin-right: 10px
+				h4
+					color: $accent
+					font-size: 20px
+				ul, ol
+					padding-left: 15px
+
+	&.who
+		.container
+			h3
+				text-align: center
+				margin-bottom: 14px
+			.col-6
+				button
+					background-color: transparent
+					border: none
+					margin: 0
+					padding: 0
+					transition: all .5s
+					border: 1px solid transparent
+					border-radius: 5px
+					outline: 0
+					&:hover
+						border: 1px solid $accent
+						cursor: pointer
+						transform: scale(1.05)
+						padding: 1px
+					img
+						width: 100%
+					p
+						text-align: center
+						margin-bottom: 5px
+						color: #fff
+
+	&.partners
+		text-align: center
+		padding-bottom: 30px 
+		background: #eee !important
+		color: #000
+		&:before
+			content: none
+		img
+			height: 50px
+			margin-right: 15px
+			margin-bottom: 20px
+			&:last-child
+				margin-right: 0
+
+footer
+	background-color: #191919
+	color: #fff
+	padding: 30px 0
+	.container
+		.col-auto
+			.fa
+				margin-right: 5px
+			img
+				width: 60px
+			.adress
+				display: inline-block
+				margin-left: 15px
+			p
+				font-size: 12px
+				margin: 0
+			.btn
+				font-size: 12px
+				padding: 10px 20px
+				margin-top: 10px
+		.col-auto:nth-child(2)
+			text-align: right
